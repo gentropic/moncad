@@ -4,8 +4,7 @@ A small **2D CAD instrument** with GCU sensibilities — draft with real **DXF
 round-trip** and **frame-correct (UTM) coordinates**, on a WebGL2 board you operate by
 command and read by panel. Offline, networkless, single file.
 
-_Not live yet — this repo is being scaffolded as the deploy surface._ Intended home:
-**https://gentropic.org/moncad**.
+Home: **https://gentropic.org/moncad**.
 
 ## What this repo is
 
@@ -15,8 +14,9 @@ The **deploy surface** only — the PWA shell (`manifest.webmanifest`, `sw.js`,
 (`ext/frame` + `ext/dxf` + `tools/moncad`); its single-file build (`node build.js
 --target=moncad`) lands here as `moncad.html`.
 
-`publish.mjs` wraps `moncad.html` into `index.html` (PWA injection). A GitHub Pages
-workflow will deploy it once the tool is ready to go live (not added yet).
+`publish.mjs` wraps `moncad.html` into `index.html` (PWA injection); the GitHub Pages
+workflow (`.github/workflows/publish.yml`) assembles + deploys it on every push to main
+(and on `workflow_dispatch` from an auditable release).
 
 ## Updating
 
